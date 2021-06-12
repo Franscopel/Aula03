@@ -12,6 +12,20 @@ public class EstruturaSwitch {
 		opcao = leitor.nextInt();
 	
 		//Aqui precisamos de uma estrutura para validar a opção inserida.
+		switch(opcao) {
+		case 1:
+			System.out.println("Os seus ifs me emocionam");
+			break;
+		case 2:
+			System.out.println("A densidade dos seus ossos é invejável");
+			break;
+		case 3:
+			System.out.println("Você é o melhor você que eu conheço");
+			break;
+		default:
+			System.out.println("Operação inválida");
+			break;
+		}
 
 		leitor.close();
 
