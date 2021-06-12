@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class OperadorOu {
 
 	public static void main(String[] args) {
-		/*Faça um programa que receba o total de compras de um usuário e um cupom. Se o total de compas exceder 1000 ou se o cupom for igual a DESCONTO20, aplicar um desconto de 20% na compra*/
+		/*Faça um programa que receba o total de compras de um usuário e um cupom. Se o total de compras exceder 1000 ou se o cupom for igual a DESCONTO20, aplicar um desconto de 20% na compra*/
 		Scanner leitor = new Scanner(System.in);
 		Double totalCompra, valorFinal=0.0;
 		String cupom;
@@ -14,6 +14,11 @@ public class OperadorOu {
 		cupom = leitor.next();
 		
 		//Aqui é preciso criar um if que verifique as duas condições para que o desconto seja ou não aplicado
+		if(totalCompra > 1000 || cupom.equalsIgnoreCase("DESCONTO20")) {
+			valorFinal = totalCompra * 0.8;
+		}else {
+			valorFinal = totalCompra;
+		}
 		
 		System.out.println("O valor final é de R$" + valorFinal);
 
